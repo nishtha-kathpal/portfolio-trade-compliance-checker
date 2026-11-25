@@ -1,13 +1,7 @@
-
 import csv
 import json
 import math
 from pathlib import Path
-
-
-# ==========================================
-# FILE CONFIGURATION
-# ==========================================
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -16,9 +10,7 @@ TRADES_FILE = BASE_DIR / "trades_test.csv"
 OUTPUT_FILE = BASE_DIR / "trade_results.csv"
 
 
-# ==========================================
 # LOAD PORTFOLIO DATA
-# ==========================================
 
 def load_portfolios():
 
@@ -26,9 +18,7 @@ def load_portfolios():
         return json.load(file)
 
 
-# ==========================================
 # CREATE TRADE RESULT
-# ==========================================
 
 def create_result(trade, decision, reason):
 
@@ -44,9 +34,7 @@ def create_result(trade, decision, reason):
     }
 
 
-# ==========================================
 # TRADE COMPLIANCE VALIDATION
-# ==========================================
 
 def check_trade(trade, portfolio):
 
@@ -204,9 +192,7 @@ def check_trade(trade, portfolio):
     )
 
 
-# ==========================================
 # PROCESS CSV TRADES
-# ==========================================
 
 def process_trades():
 
@@ -260,9 +246,7 @@ def process_trades():
     return results
 
 
-# ==========================================
 # SAVE RESULTS TO CSV
-# ==========================================
 
 def save_results(results):
 
@@ -294,9 +278,7 @@ def save_results(results):
         writer.writerows(results)
 
 
-# ==========================================
 # DISPLAY SUMMARY
-# ==========================================
 
 def display_summary(results):
 
@@ -340,9 +322,7 @@ def display_summary(results):
     print("\nResults saved to:", OUTPUT_FILE)
 
 
-# ==========================================
 # MAIN FUNCTION
-# ==========================================
 
 def main():
 
