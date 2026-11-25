@@ -45,5 +45,3 @@ The application generates `trade_results.csv`, containing:
 5. Position concentration check.
 6. Trade approval.
 
-## Note
-Each trade is evaluated independently against the original portfolio reference data. The application does not execute actual trades.
